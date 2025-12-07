@@ -8,18 +8,18 @@ check_for_normality <- function(colname, dataset) {
     return(NULL)
   }
   
-  # Calculate statistics
+
   mean_val <- mean(dataset[[colname]], na.rm = TRUE)
   median_val <- median(dataset[[colname]], na.rm = TRUE)
   sd_val <- sd(dataset[[colname]], na.rm = TRUE)
   
-  # Print statistics
+
   cat("Column:", colname, "\n")
   cat("Mean:", mean_val, "\n")
   cat("Median:", median_val, "\n")
   cat("Standard Deviation:", sd_val, "\n")
   
-  # Plot histogram
+
   hist(dataset[[colname]],
        main = paste('Histogram of', colname),
        xlab = colname,
@@ -30,7 +30,10 @@ check_for_normality <- function(colname, dataset) {
   )
 }
 
-# --- Data Cleaning ---
+
+
+
+
 sum(is.na(Cancer_Data_11))
 colSums(is.na(Cancer_Data_11))
 
@@ -43,10 +46,10 @@ Cancer_Data_11$radius_mean <- as.numeric(Cancer_Data_11$radius_mean)
 sum(is.na(Cancer_Data_11$radius_mean))
 Cancer_Data_11 <- Cancer_Data_11[!is.na(Cancer_Data_11$radius_mean), ]
 
-# --- Normality Check ---
+
 check_for_normality("radius_mean", Cancer_Data_11)
 
-# --- T-test and Barplot ---
+
 mean_malignant <- mean(Cancer_Data_11$radius_mean[Cancer_Data_11$diagnosis == "M"])
 mean_benign <- mean(Cancer_Data_11$radius_mean[Cancer_Data_11$diagnosis == "B"])
 
