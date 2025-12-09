@@ -69,6 +69,18 @@ bp <- barplot(
   ylim = c(0, max(bar_means) + 2)
 )
 
+bp <- boxplot(
+  
+  Cancer_Data_11$radius_mean~Cancer_Data_11$diagnosis ,
+  
+  main = "Mean Radius (Malignant vs Benign)",
+  
+  ylab = "Mean radius_mean",
+  
+  xlab = "Diagnosis",
+  
+)
+
 text(
   x = bp,
   y = bar_means,
