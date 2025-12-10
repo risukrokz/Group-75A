@@ -14,12 +14,12 @@ check_for_normality <- function(colname, dataset) {
   sd_val <- sd(dataset[[colname]], na.rm = TRUE)
   
   
-  cat("Column:", colname, "\n")
-  cat("Mean:", mean_val, "\n")
-  cat("Median:", median_val, "\n")
-  cat("Standard Deviation:", sd_val, "\n")
+  print("Column:", colname, "\n")
+  print("Mean:", mean_val, "\n")
+  print("Median:", median_val, "\n")
+  print("Standard Deviation:", sd_val, "\n")
   
-  
+  png("Box Plot of Mean Radius (Malignant vs Benign")
   hist(dataset[[colname]],
        main = paste('Histogram of', colname),
        xlab = colname,
@@ -28,6 +28,7 @@ check_for_normality <- function(colname, dataset) {
        border = 'black',
        breaks = 20
   )
+dev.off()
 }
 
 
@@ -54,8 +55,10 @@ mean_malignant <- mean(Cancer_Data_11$radius_mean[Cancer_Data_11$diagnosis == "M
 mean_benign <- mean(Cancer_Data_11$radius_mean[Cancer_Data_11$diagnosis == "B"])
 
 t_test<-t.test(radius_mean ~ diagnosis, data = Cancer_Data_11)
+wilcoxy<-wilcox.test(radius_mean ~ diagnosis, data = Cancer_Data_11)
 
 print(t_test)
+print(wilcoxy)
 
 bar_means <- c(mean_malignant, mean_benign)
 names(bar_means) <- c("Malignant", "Benign")
@@ -68,7 +71,7 @@ bp <- barplot(
   col = c("red", "green"),
   ylim = c(0, max(bar_means) + 2)
 )
-
+png("Box Plot of Mean Radius (Malignant vs Benign)")
 bp <- boxplot(
   
   Cancer_Data_11$radius_mean~Cancer_Data_11$diagnosis ,
@@ -80,12 +83,4 @@ bp <- boxplot(
   xlab = "Diagnosis",
   
 )
-
-text(
-  x = bp,
-  y = bar_means,
-  labels = round(bar_means, 2),
-  pos = 3,
-  cex = 0.8,
-  col = "black"
-)
+dev.off()
