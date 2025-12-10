@@ -1,0 +1,40 @@
+--- Conclusions ---
+ 
+
+1.  Results explained (75 words) 
+ 
+The results explain the difference in the average tumor size between the two groups. Malignant(harmful) tumors had a much larger radius_mean value of 17.46283 than Benign(non-harmful) tumors 12.15885. 
+  
+
+Statistical test confirmed that the difference is real and not due to chance.  
+ 
+
+P-value was extremely small, showing the data strongly supports the idea that malignant tumors tend to be bigger.  
+ 
+
+In this tumor size is closely linked to where a tumor is cancerous or not. 
+ 
+--------
+
+
+2.  Interpretation of the results (75 words) 
+
+ 
+These results answer the research question by showing that tumor radius_mean can help tell the difference between Malignant and Benign breast tumors. In simple terms, larger tumors were much more likely to be Malignant.  
+
+ 
+
+This could help doctors make quicker decisions or identify patients who need further checks.  
+
+While size alone can’t replace full medical tests, it can act as an early warning sign and can help provide valuable medical clues. 
+
+------- 
+
+
+3. Reasons and/or implications for future work, limitations of your study (50 words) 
+ 
+To further increase the credibility of this research question, additional statistical tests should be done.  
+ 
+It is recommended to expand the research to include multivariate analysis to find the relationship between the tumor features. 
+ 
+The sample came from one source, which may limit general accuracy. 
