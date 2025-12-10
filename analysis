@@ -1,0 +1,28 @@
+--- Analysis ---
+
+4.1 Statistical Test Used 
+
+An independent two-sample t-test was used to compare the mean ‘radius_mean’ between two tumor types. Although the radius_mean is not perfectly normal, the sample size in each group is large enough for the t-test to detect minor deviations from normality. As the research question focuses on comparing the means rather than median, non-parametric tests like Wilcox test are not used.Since variances were not assumed equal, t-test was applied. 
+
+ 
+
+4.2 Hypothesis Decision 
+
+The t-test results show a clear difference in mean tumor radius between benign and malignant cancer supporting alternative hypothesis. 
+
+t = -22.177,  
+
+df = 288.79,   
+
+p-value < 2.2e-16.  
+
+Because the p-value is far below the 0.05 threshold, the null hypothesis is rejected. 
+
+ 
+Malignant tumors have a substantially larger mean radius 17.46283 compared to Benign tumors 12.15885, with a mean difference of approximately 5.30398 units. 
+
+This difference is further supported by the 95% confidence interval from the range -5.774710 to -4.833259. 
+
+This implies that radius_mean is a strong and good indicator for identifying Malignant from Benign breast tumors. 
+
+ 
