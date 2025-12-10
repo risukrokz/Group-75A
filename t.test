@@ -1,0 +1,19 @@
+--- T-Test ---
+
+t.test(radius_mean ~ diagnosis, data = Cancer_Data_11)"
+
+
+--- output ---
+
+> t.test(radius_mean ~ diagnosis, data = Cancer_Data_11)
+
+	Welch Two Sample t-test
+
+data:  radius_mean by diagnosis
+t = -22.177, df = 288.79, p-value < 2.2e-16
+alternative hypothesis: true difference in means between group B and group M is not equal to 0
+95 percent confidence interval:
+ -5.774710 -4.833259
+sample estimates:
+mean in group B mean in group M 
+       12.15885        17.46283 
