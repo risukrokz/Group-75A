@@ -14,10 +14,14 @@ check_for_normality <- function(colname, dataset) {
   sd_val <- sd(dataset[[colname]], na.rm = TRUE)
   
   
-  cat("Column:", colname, "\n")
-  cat("Mean:", mean_val, "\n")
-  cat("Median:", median_val, "\n")
-  cat("SD:", sd_val, "\n\n")
+  print("Column:")
+  print(colname)
+  print("Mean:")
+  print(mean_val)
+  print("Median:")
+  print(median_val)
+  print("SD:")
+  print(sd_val)
   
   png("Histogram_radius_mean.png")
   hist(dataset[[colname]],
